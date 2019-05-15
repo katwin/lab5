@@ -5,6 +5,12 @@ public class Player {
     private int weight;
     private String name;
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Player)) return false;
+        return size == ((Player) obj).getSize() && weight == ((Player) obj).getWeight() && name.equals(((Player) obj).getName());
+    }
+
     public int getSize() {
         return size;
     }

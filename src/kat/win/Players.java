@@ -1,5 +1,8 @@
 package kat.win;
 
-public class Players implements Comparable{
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class Players {
 
 }
