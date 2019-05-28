@@ -1,6 +1,9 @@
 package kat.win;
 
-public class Player {
+/**
+ * Класс, отвечающий за коллекцию игроков и их характеристики.
+ */
+public class Player implements Comparable<Player> {
     private int size;
     private int weight;
     private String name;
@@ -33,5 +36,10 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public int compareTo(Player o) {
+        return size > o.getSize() ? 1 : -1;
     }
 }

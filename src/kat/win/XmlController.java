@@ -12,20 +12,29 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
-public class DataController {
+/**
+ * Класс, отвечающий за XML-файл, его загрузку, сохранение и запись.
+ */
+public class XmlController {
+    private String filename;
 
-    public static String AUTOSAVE;
-    public static void save(Game game) {
+    public XmlController(String filename) {
+        this.filename = filename;
+    }
 
+    /**
+     * Сохраняет данные в файл.
+     * @param game
+     */
+    public void save(Game game) {
         Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     System.out.println("\nАвтосохранение...");
-                    writer(game, new OutputStreamWriter(new FileOutputStream(AUTOSAVE), StandardCharsets.UTF_8));
-                    System.out.println("Сохранено в файл " + AUTOSAVE);
+                    writer(game, new OutputStreamWriter(new FileOutputStream(filename), StandardCharsets.UTF_8));
+                    System.out.println("Сохранено в файл " + filename);
                 } catch (IOException e) {
                     System.out.println("Не удалось выполнить автосохранение: " + e.getMessage());
                 }
@@ -33,7 +42,51 @@ public class DataController {
         }));
     }
 
-    private static void writer(Game game, OutputStreamWriter oswriter) throws IOException {
+    /**
+     * Заполняет XML-файл.
+     * @return
+     * @throws IOException
+     */
+    public String getFileContent() throws IOException {
+        File file = new File(filename);
+        if (!file.exists())
+            return getDefaultXml("");
+        try (BufferedInputStream inputStream = new BufferedInputStream(new FileInputStream(filename));
+             InputStreamReader reader = new InputStreamReader(inputStream)
+        ) {
+            StringBuilder fileContent = new StringBuilder();
+            int current;
+            do {
+                current = reader.read();
+                if (current != -1)
+                    fileContent.append((char) current);
+            } while (current != -1);
+            return getDefaultXml(fileContent.toString());
+        }
+    }
+
+    /**
+     * Обрабатывает данные перед записью в XML-файл.
+     * Если файл пуст, записывает кодировку и тег начала/конца коллекции.
+     * @param content
+     * @return
+     */
+    private String getDefaultXml(String content) {
+        if (content.isEmpty()) {
+            content = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n" +
+                    "<players>\n" +
+                    "</players>";
+        }
+        return content;
+    }
+
+    /**
+     * Записывает (добавляет) игроков в файл.
+     * @param game
+     * @param oswriter
+     * @throws IOException
+     */
+    private void writer(Game game, OutputStreamWriter oswriter) throws IOException {
         oswriter.write("<?xml version=\"1.0\"?>\n");
         oswriter.write("<players>\n");
         for (Player player : game.getPlayers()) {
@@ -48,8 +101,15 @@ public class DataController {
         oswriter.close();
     }
 
-
-    public static void load(String xml, Game game) throws ParserConfigurationException, IOException, SAXException {
+    /**
+     * Загружает игрока в коллекцию.
+     * @param xml
+     * @param game
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws SAXException
+     */
+    public void load(String xml, Game game) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         builder = factory.newDocumentBuilder();
@@ -88,6 +148,9 @@ public class DataController {
 
                     }
                 }
+                if (name == null) {
+                    throw new SAXException("<name> обязателен, но не указан в <player>");
+                }
                 if (size == null) {
                     throw new SAXException("<size> обязателен, но не указан в <player>");
                 }
@@ -95,10 +158,10 @@ public class DataController {
                     throw new SAXException("<weight> обязателен, но не указан в <player>");
                 }
                 Player player = new Player();
-                if (size != null) player.setSize(size);
-                if (weight != null) player.setWeight(weight);
-                if (name != null) player.setName(name);
-                game.add(player);
+                player.setSize(size);
+                player.setWeight(weight);
+                player.setName(name);
+                game.addSilent(player);
             }
         }
     }

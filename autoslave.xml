@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<players>
+  <player>
+    <name>qwe</name>
+    <weight>123</weight>
+    <size>1</size>
+  </player>
+  <player>
+    <name>asd</name>
+    <weight>100</weight>
+    <size>10</size>
+  </player>
+</players>

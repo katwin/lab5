@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab5:jar" />
+      <artifact name="lab5" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2411f6b-c689-4bd8-a120-461c1853b195" name="Default Changelist" comment="все работает, кроме show. не прописан javadoc и команда help, а так же автосохранение при удалении элементов из коллекции.">
-      <change afterPath="$PROJECT_DIR$/autoslave.xml" afterDir="false" />
+    <list default="true" id="a2411f6b-c689-4bd8-a120-461c1853b195" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/kat/win/JsonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autosave.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Game$ChanceToWin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/kat/win/Game$ChanceToWin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoslave.xml" beforeDir="false" afterPath="$PROJECT_DIR$/autoslave.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Acting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Animal$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Creature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Game$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Game$1InformBeforeGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Game$ChanceToWin.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/kat/win/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab5/kat/win/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Location.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Person$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Person$mind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/Speech.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/ZeroMembersException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab5/kat/win/ZeroSizeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Acting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Creature.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/XmlController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kat/win/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kat/win/HoosegowStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Location.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kat/win/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Person.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kat/win/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kat/win/Players.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kat/win/Players.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Players.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/Speech.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/ZeroMembersException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kat/win/ZeroSizeException.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,46 +55,54 @@
     <session id="1603096370">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.112" value="1" />
+          <entry key="project.open.time.115" value="1" />
           <entry key="project.open.time.140" value="1" />
           <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.331" value="1" />
           <entry key="project.open.time.372" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.79" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.84" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="MF" value="1" />
           <entry key="class" value="1" />
-          <entry key="java" value="48" />
-          <entry key="xml" value="3" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="54" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="48" />
-          <entry key="XML" value="3" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="54" />
+          <entry key="Manifest" value="1" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="1" />
-          <entry key="java" value="7383" />
+          <entry key="dummy" value="17" />
+          <entry key="java" value="12764" />
+          <entry key="txt" value="21" />
           <entry key="xml" value="182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7383" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="12764" />
+          <entry key="PLAIN_TEXT" value="38" />
           <entry key="XML" value="182" />
         </counts>
       </usages-collector>
@@ -78,37 +110,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/kat/win/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kat/win/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="181" column="62" lean-forward="true" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+            <state relative-caret-position="51">
+              <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kat/win/Player.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/kat/win/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autoslave.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kat/win/DataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+            <state relative-caret-position="242">
+              <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,11 +150,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kat/win/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="2754">
+              <caret line="162" column="56" selection-start-line="162" selection-start-column="56" selection-end-line="162" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#2953#2954#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kat/win/JsonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kat/win/XmlController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autoslave.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -136,6 +206,18 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>gso</find>
+      <find>Нельзя так издеваться, тут же пусто!</find>
+      <find>add</find>
+      <find>Не удалось прочитать команду</find>
+      <find>&gt;</find>
+      <find>&quot;&gt;&quot;</find>
+      <find>&quot;&gt; &quot;</find>
+      <find>json</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -157,10 +239,13 @@
         <option value="$PROJECT_DIR$/src/kat/win/Command.java" />
         <option value="$PROJECT_DIR$/src/kat/win/WokringCode.java" />
         <option value="$PROJECT_DIR$/src/kat/win/WorkingCode.java" />
-        <option value="$PROJECT_DIR$/src/kat/win/Game.java" />
+        <option value="$PROJECT_DIR$/autosave.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/kat/win/DataController.java" />
         <option value="$PROJECT_DIR$/src/kat/win/Player.java" />
-        <option value="$PROJECT_DIR$/autosave.xml" />
+        <option value="$PROJECT_DIR$/src/kat/win/Game.java" />
+        <option value="$PROJECT_DIR$/src/kat/win/JsonController.java" />
+        <option value="$PROJECT_DIR$/src/kat/win/XmlController.java" />
         <option value="$PROJECT_DIR$/src/kat/win/Main.java" />
       </list>
     </option>
@@ -172,8 +257,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1201" />
+    <option name="x" value="252" />
+    <option name="width" value="985" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -182,14 +267,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
               <item name="lab5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab5" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab5" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lab5" type="b2602c69:ProjectViewProjectNode" />
@@ -206,18 +301,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="Scanner&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557828912341" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559034835394" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -235,7 +330,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="kat.win.Main" />
       <module name="lab5" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="autoslave" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -269,6 +364,9 @@
       <workItem from="1557752034575" duration="6897000" />
       <workItem from="1557759857646" duration="17616000" />
       <workItem from="1557915451286" duration="211000" />
+      <workItem from="1557943361006" duration="3318000" />
+      <workItem from="1558478149913" duration="9576000" />
+      <workItem from="1558981564231" duration="10719000" />
     </task>
     <task id="LOCAL-00001" summary="все работает, кроме show. не прописан javadoc и команда help, а так же автосохранение при удалении элементов из коллекции.">
       <created>1552992731670</created>
@@ -281,14 +379,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86335000" />
+    <option name="totallyTimeSpent" value="110815000" />
   </component>
   <component name="TodoView" selected-index="1" />
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18986385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22617246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -297,16 +395,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24918033" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30327868" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31639344" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4295082" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295082" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.19836065" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.44590163" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
@@ -358,53 +456,37 @@
     <MESSAGE value="все работает, кроме show. не прописан javadoc и команда help, а так же автосохранение при удалении элементов из коллекции." />
     <option name="LAST_COMMIT_MESSAGE" value="все работает, кроме show. не прописан javadoc и команда help, а так же автосохранение при удалении элементов из коллекции." />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>reader.</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>reader.readLine()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>reader.read()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>e.printStackTrace();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Acting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/ZeroMembersException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/ZeroSizeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Creature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Acting.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/ZeroMembersException.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/ZeroSizeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Creature.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Animal.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Location.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/ApplicationShutdownHooks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -413,13 +495,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kat/win/Command.java" />
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Players.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -427,37 +502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Speech.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/WorkingCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#3209#3210#0" expanded="true" />
-            <element signature="e#3270#3271#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3361#3362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Speech.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/OutputStreamWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-280">
@@ -493,10 +538,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Main.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/WorkingCode.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Players.java" />
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Person.java" />
+    <entry file="file://$PROJECT_DIR$/autoslave2.xml" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="181" column="62" lean-forward="true" selection-start-line="181" selection-start-column="62" selection-end-line="181" selection-end-column="62" />
+        <state relative-caret-position="13107">
+          <caret line="811" column="25" selection-start-line="811" selection-start-column="19" selection-end-line="811" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab5.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="162" column="56" selection-start-line="162" selection-start-column="56" selection-end-line="162" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#2953#2954#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/JsonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -505,28 +586,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kat/win/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autoslave.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/DataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        <state relative-caret-position="51">
+          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kat/win/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/kat/win/XmlController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        <state relative-caret-position="68">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autoslave.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kat/win/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -539,7 +642,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>lab5:jar</last-edited>
+          <last-edited>lab5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

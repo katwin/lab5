@@ -1,98 +1,180 @@
 package kat.win;
 
 import java.util.ArrayList;
-import java.util.Objects;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 
+/**
+ * Класс, отвечающий за игру, в которой участвуют игроки-элементы коллекции.
+ * Хранит методы, имеющие отношение непосредственно к игрокам и их характеристикам.
+ */
 public class Game {
-    private ArrayList<Player> players = new ArrayList<>();
+    private List<Player> players = new ArrayList<>();
+    private Date date = new Date();
 
-    private final int speed = 10;
-    private int weight;
-    private int size;
-
-    public ArrayList<Player> getPlayers() {
+    public List<Player> getPlayers() {
         return players;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void add(Player player){
-        players.add(player);
-    }
-
+    /**
+     * Создает игрока, присваивает ему входные характеристики.
+     * @param name
+     * @param weight
+     * @param size
+     */
     void addToGame(String name, int weight, int size) {
-        //System.out.println(name + " присоединился к игре ");
         Player player = new Player();
         player.setName(name);
         player.setSize(size);
         player.setWeight(weight);
-        players.add(player);
-        setSize(size);
-        setWeight(weight);
+        addToGame(player);
     }
 
+    /**
+     * Проверяет существование игрока и отправляет его в метод addSilent.
+     * @param player
+     */
     void addToGame(Player player) {
-        //player.setSize(size);
-        //player.setWeight(weight);
+        if (player == null)
+            return;
+        System.out.println(player.getName() + " присоединился к игре ");
+        addSilent(player);
+    }
+
+    /**
+     * Добавляет игрока в коллекцию и сортирует ее.
+     * @param player
+     */
+    public void addSilent(Player player) {
+        if (player == null)
+            return;
         players.add(player);
-        //setSize(size);
-        //setWeight(weight);
+        Collections.sort(players);
     }
 
-    void ready () throws ZeroMembersException {
-        //if (players.size()==0) throw new ZeroMembersException("Никто не играет в игру", players.size());
-        //System.out.println("Количество игроков = " + players.size());
-        //System.out.println("Скорость течения реки = " + speed);
-    }
-
-    class ChanceToWin {
-        int chance;
-        void knowChance() throws ZeroSizeException {
-            try {
-                if (size == 0)
-                {
-                    throw new ZeroSizeException("Палочка не существует", size);
-                }
-                this.chance = (size + (weight/(size*4) + speed)*3);
+    /**
+     * Удаляет игрока из коллекции.
+     * @param player
+     */
+    public void removePlayer(Player player) {
+        for (int i = 0; i < getPlayers().size(); i++) {
+            if (getPlayers().get(i).equals(player)) {
+                getPlayers().remove(i);
             }
-            catch (ZeroSizeException e) {
-                System.out.println("Возникло исключение, " + e.getNum());
-            }
-            //System.out.println("Шанс победить = " + this.chance);
         }
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (o == null)
-            return false;
-        if (o.getClass() != this.getClass())
-            return false;
-        Game game = (Game) o;
-        return this.weight == game.weight
-                && size == game.size;
+    /**
+     * Добавляет игрока в коллекцию, если вес палочки игрока больше максимального веса палочки в игре.
+     * @param player
+     */
+    public void addIfMax(Player player) {
+        Player player2 = findMax();
+        if (player2 == null) {
+            addToGame(player.getName(), player.getWeight(), player.getSize());
+        } else if (player != null) {
+            if (player.getWeight() > player2.getWeight()) {
+                addToGame(player.getName(), player.getWeight(), player.getSize());
+            } else {
+                System.out.println("Вы недостаточно большой.");
+            }
+        } else {
+            System.out.println("Некорректные данные.");
+        }
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(weight, size);
+    /**
+     * Добавляет игрока в коллекцию, если вес палочки игрока меньше минимального веса палочки в игре.
+     * @param player
+     */
+    public void addIfMin(Player player) {
+        Player player2 = findMin();
+        if (player2 == null) {
+            addToGame(player.getName(), player.getWeight(), player.getSize());
+        } else if (player != null) {
+            if (player.getWeight() < player2.getWeight()) {
+                addToGame(player.getName(), player.getWeight(), player.getSize());
+            } else {
+                System.out.println("Вы недостаточно маленький.");
+            }
+        } else {
+            System.out.println("Некорректные данные.");
+        }
     }
 
+    /**
+     * Отображает отсортированный список игроков-элементов коллекции и их характеристики.
+     */
+    public void showPlayers() {
+        if (getPlayers().size() != 0) {
+            System.out.println("Игроки: ");
+            for (int i = 0; i < getPlayers().size(); i++) {
+                System.out.println(
+                        "Игрок №" + (i + 1) + ": \n" +
+                                "   Имя: " + getPlayers().get(i).getName() + "\n" +
+                                "   Длина палочки: " + getPlayers().get(i).getSize() + "\n" +
+                                "   Вес палочки: " + getPlayers().get(i).getWeight() + "\n"
+                );
+            }
+        } else {
+            System.out.println("Никто не хочет с тобой играть :с");
+        }
+    }
+
+    /**
+     * Удаляет первого игрока коллекции.
+     */
+    public void removeFirstPlayer() {
+        if (getPlayers().size() != 0) getPlayers().remove(0);
+    }
+
+    /**
+     * Отображает основную информацию об игре(коллекции).
+     */
+    public void info() {
+        System.out.println(
+                "Количество игроков: " + getPlayers().size() + "\n" +
+                        "Тип коллекции: " + getPlayers().getClass().getName() + "\n" +
+                        "Дата создания: " + date.toString() + "\n"
+        );
+    }
+
+    /**
+     * Находит игрока, вес палочки которого является максимальным среди остальных.
+     * @return
+     */
+    private Player findMax() {
+        Player player = null;
+        if (getPlayers().size() > 0) {
+            for (Player p : getPlayers()) {
+                if (player == null) {
+                    player = p;
+                }
+                if (p.getWeight() > player.getWeight()) {
+                    player = p;
+                }
+            }
+        }
+        return player;
+    }
+
+    /**
+     * Находит игрока, вес палочки которого является минимальным среди остальных.
+     * @return
+     */
+    private Player findMin() {
+        Player player = null;
+        if (getPlayers().size() > 0) {
+            for (Player p : getPlayers()) {
+                if (player == null) {
+                    player = p;
+                }
+                if (p.getWeight() < player.getWeight()) {
+                    player = p;
+                }
+            }
+        }
+        return player;
+    }
 }
