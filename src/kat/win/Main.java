@@ -82,12 +82,19 @@ public class Main {
      * @throws IOException
      */
     private static String getMultilineCommand(BufferedReader reader) throws IOException {
+        int brackets = 0;
         StringBuilder builder = new StringBuilder();
         String str;
         do {
             str = reader.readLine();
+            String[] split = (" " + str + " ").split("\\{");
+            int opened = split.length == 0 ? 1 : split.length - 1;
+            split = (" " + str + " ").split("}");
+            int closed = split.length == 0 ? 1 : split.length - 1;
+            brackets += opened;
+            brackets -= closed;
             builder.append(str + "\n");
-        } while (!str.endsWith(";"));
+        } while (brackets > 0);
         return builder.toString().replace(";", "");
     }
 
@@ -180,7 +187,6 @@ public class Main {
             default:
                 System.out.println("Вы меня, конечно, извините...");
                 break;
-
         }
         return "";
     }
