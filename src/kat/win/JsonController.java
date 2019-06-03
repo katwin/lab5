@@ -40,6 +40,14 @@ public class JsonController {
             System.out.println("Не задан размер");
             return null;
         }
+        if (player.getClothes().getType() == null) {
+            System.out.println("Не задан тип одежды");
+            return null;
+        }
+        if (player.getClothes().getSize() == null) {
+            System.out.println("Не задан размер одежды");
+            return null;
+        }
         return player;
     }
 }

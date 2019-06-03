@@ -7,6 +7,7 @@ public class Player implements Comparable<Player> {
     private int size;
     private int weight;
     private String name;
+    private Clothes clothes;
 
     @Override
     public boolean equals(Object obj) {
@@ -38,6 +39,13 @@ public class Player implements Comparable<Player> {
         this.name = name;
     }
 
+    public Clothes getClothes() {
+        return clothes;
+    }
+
+    public void setClothes(Clothes clothes){
+        this.clothes=clothes;
+    }
     @Override
     public int compareTo(Player o) {
         return size > o.getSize() ? 1 : -1;

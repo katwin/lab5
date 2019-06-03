@@ -5,6 +5,9 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 
+//todo * у элементов коллекции должно быть больше полей (к примеру, добавить вложенный класс/массив)
+//todo ** придумать идею реализации вложенного класса/массива для игрока
+
 public class Main {
     private static XmlController xmlController;
     private static JsonController jsonController = new JsonController();
@@ -171,7 +174,7 @@ public class Main {
                         "remove - Удаляет игрока\n" +
                         "add_if_max -  Добавляет игрока в игру, если его палочка тяжелее остальных палочек\n" +
                         "add_if_min - Добавляет игрока в игру, если его палочка легче остальных палочек\n" +
-                        "Пример ввода игрока:\n" + "{\"name\":\"Lupa\",\"size\":17,\"weight\":24}");
+                        "Пример ввода игрока:\n" + "{\"name\":\"Lupa\",\"size\":17,\"weight\":24,\"clothes\":{\"type\":\"Shirt\",\"size\":\"XL\"}}");
                 break;
 
             default:
